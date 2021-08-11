@@ -55,14 +55,14 @@ func (r *OktaPolicyNameRule) Check(runner tflint.Runner) error {
 			if len(val) > r.max {
 				runner.EmitIssueOnExpr(
 					r,
-					"name must be from 1 to 50 characters",
+					"Name must be from 1 to 50 characters",
 					attribute.Expr,
 				)
 			}
 			if len(val) < r.min {
 				runner.EmitIssueOnExpr(
 					r,
-					"name must be from 1 to 50 characters",
+					"Name must be from 1 to 50 characters",
 					attribute.Expr,
 				)
 			}
