@@ -15,7 +15,7 @@ You can install the plugin with `tflint --init`. Declare a config in `.tflint.hc
 ```hcl
 plugin "okta" {
   enabled = true
-  version = "0.1.01"
+  version = "0.1.02"
   source  = "github.com/vazuev/tflint-ruleset-okta"
   signing_key = <<-KEY
   -----BEGIN PGP PUBLIC KEY BLOCK-----

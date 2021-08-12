@@ -15,7 +15,7 @@ func Test_OktaPolicyNameRule_OneChar(t *testing.T) {
 		{
 			Name: "Length is 1",
 			Content: `
-resource "okta_auth_server_policy_rule" "auditlogservice_read" {
+resource "okta_auth_server_policy" "auditlogservice_read" {
   name = "f"
 }`,
 			Expected: helper.Issues{},
@@ -44,7 +44,7 @@ func Test_OktaPolicyNameRule_50Char(t *testing.T) {
 		{
 			Name: "Length is 50",
 			Content: `
-resource "okta_auth_server_policy_rule" "auditlogservice_read" {
+resource "okta_auth_server_policy" "auditlogservice_read" {
   name = "Check ____________________________________ 50 char"
 }`,
 			Expected: helper.Issues{},
@@ -73,7 +73,7 @@ func Test_OktaPolicyNameRule_ZeroChar(t *testing.T) {
 		{
 			Name: "Length is 0",
 			Content: `
-resource "okta_auth_server_policy_rule" "auditlogservice_read" {
+resource "okta_auth_server_policy" "auditlogservice_read" {
   name = ""
 }`,
 			Expected: helper.Issues{
@@ -112,7 +112,7 @@ func Test_OktaPolicyNameRule_51Char(t *testing.T) {
 		{
 			Name: "name must be from 1 to 50 characters",
 			Content: `
-resource "okta_auth_server_policy_rule" "auditlogservice_read" {
+resource "okta_auth_server_policy" "auditlogservice_read" {
   name = "Check _____________________________________ 51 char"
 }`,
 			Expected: helper.Issues{

@@ -17,7 +17,7 @@ type OktaPolicyNameRule struct {
 // NewOktaPolicyNameRule returns a new rule
 func NewOktaPolicyNameRule() *OktaPolicyNameRule {
 	return &OktaPolicyNameRule{
-		resourceType:  "okta_auth_server_policy_rule",
+		resourceType:  "okta_auth_server_policy",
 		attributeName: "name",
 		max:           50,
 		min:           1,
